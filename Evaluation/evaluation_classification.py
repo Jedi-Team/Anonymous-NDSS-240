@@ -16,17 +16,12 @@ att_fail = 0
 recov = 0
 lost = 0
 
-#load the class dictionary
-#------------------------
-class_file = open("./imagenet_class_index.json")
-class_idx = json.load(class_file)
-idx2label = [class_idx[str(k)][1] for k in range(len(class_idx))]
 
 #load the model
 #VGG16 / VGG19 / ResNet18 / Resnet50 / Resnet101 / InceptionV3
 #---------------
 #pascal07 models
-model = torch.load("D:/PHD_Bilel/classification_tests/vgg19_pas07.pth")
+model = torch.load("")
 #model = torch.load('D:/PHD_Bilel/defense_codes/PatchCleanser-main/checkpoints/resnet50_imagenet_model.pth')
 
 
@@ -47,11 +42,11 @@ model.eval()
 ls = 0
 #load image from pytorch structure
 #---------------------------------
-clean_ds = ds.ImageFolder(root = "D:/PHD_Bilel/Datasets/autoenc/pascal_07/clean/",
+clean_ds = ds.ImageFolder(root = "",
                    )
-patch_ds = ds.ImageFolder(root = "D:/PHD_Bilel/Datasets/patch_shape_tests/pascal_07/patch_advpatch_combi/",
+patch_ds = ds.ImageFolder(root = "",
                    )
-inpaint_ds = ds.ImageFolder(root = "D:/PHD_Bilel/Datasets/autoenc/pascal_07/clean/",
+inpaint_ds = ds.ImageFolder(root = "",
                    )
 for f in tqdm.tqdm(range(len(clean_ds)), position=0, leave=True):
     c_img , c_tgt = clean_ds.__getitem__(f)
@@ -126,8 +121,6 @@ for f in tqdm.tqdm(range(len(clean_ds)), position=0, leave=True):
     if lost > 0:
         lost_pct = round((lost/att_fail) * 10000) / 100
     
-    #print("Predicted: " + idx2label[pred] + " Actual: " + idx2label[tgt])
-    #print("Detection accuracy :" + str(tp) + "/" + str(gt) + " (" + str(ratio) + ")")
 print()
 print("Detection accuracy :" + str(c_tp) + "/" + str(gt) + " (" + str(correct_pred_pct) + ")")
 print("Adversarial attack success :" + str(att_succ) + "/" + str(c_tp) + " (" + str(att_succ_pct) + ")")
