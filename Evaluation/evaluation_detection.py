@@ -18,20 +18,20 @@ def list_duplicates(n):
      return result
 
 #yolo configs
-yolo_v2_cfg = "D:/PHD_Bilel/adversarial-yolo-master/cfg/yolo.cfg"
-yolo_v2_weights = "D:/PHD_Bilel/adversarial-yolo-master/weights/yolo.weights"
+yolo_v2_cfg = ""
+yolo_v2_weights = ""
 
-yolo_v3_cfg = "D:/PHD_Bilel/det/yolov3/yolov3-spp.cfg"
-yolo_v3_weights = "D:/PHD_Bilel/det/yolov3/yolov3-spp.weights"
+yolo_v3_cfg = ""
+yolo_v3_weights = ""
 
-yolo_v4_cfg = "D:/PHD_Bilel/det/yolov3/yolov4.cfg"
-yolo_v4_weights = "D:/PHD_Bilel/det/yolov3/yolov4.weights"
+yolo_v4_cfg = ""
+yolo_v4_weights = ""
 
-#'D:/PHD_Bilel/KUmono/KUmono/C1/'
 
-fpath_clean = "D:/PHD_Bilel/Wildtrack_dataset_full/Wildtrack_dataset/Image_subsets/C5/"
-fpath_patch = 'D:/PHD_Bilel/Datasets/wildtrack/yolopatch_multi2_att3/C5/'
-fpath_inpaint = "D:/PHD_Bilel/Wildtrack_dataset_full/Wildtrack_dataset/Image_subsets/C5/"
+
+fpath_clean = ""
+fpath_patch = ""
+fpath_inpaint = ""
 folder = os.listdir(fpath_clean)
 
 results_c = []
@@ -72,24 +72,9 @@ for im in folder:
     
 
     img_c = Image.open(img_path_clean)
-    #inria gt
-    # gt_file = open(r'D:\PHD_Bilel\INRIAPerson\inria_gt.json')
-    # all_gt = json.load(gt_file)
-    # frame_gt = np.array(all_gt[im])
-    # frame_gt = frame_gt // 2
-    # if frame_gt.size == 0:
-    #     f=f+1
-    #     continue
+     
+    #ground ruths go here
     
-    #casia gt
-    # apath = 'D:/PHD_Bilel/casia adv tests/entr_test_full/annot/' + im[0:-4] + '.json'
-    # fafil = open(apath)
-    # aa = json.load(fafil)
-    # frame_gt = np.array([[aa['xmin'],aa['ymin'],aa['xmax'],aa['ymax']]])
-    
-    #wildtrack gt
-    wild_all_gt = np.load("D:/PHD_Bilel/adversarial-yolo-master/wildtrack_annot.npy",allow_pickle = True)
-    frame_gt = np.array(wild_all_gt[f,4])
     
     f=f+1
     
