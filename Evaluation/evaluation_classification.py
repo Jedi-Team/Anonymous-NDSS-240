@@ -20,28 +20,24 @@ lost = 0
 #load the model
 #VGG16 / VGG19 / ResNet18 / Resnet50 / Resnet101 / InceptionV3
 #---------------
-#pascal07 models
+#pascal07 models: download from the main page and insert weight file path here
 model = torch.load("")
-#model = torch.load('D:/PHD_Bilel/defense_codes/PatchCleanser-main/checkpoints/resnet50_imagenet_model.pth')
 
 
-#pretrained imagenet
+#pretrained imagenet: we use pre-trained pytorch models
 #model = models.inception_v3(pretrained = True)
 
 model.cuda()
 model.eval()
 
-# load image from disk
-#----------------------
-# img = Image.open("D:/PHD_Bilel/casia adv tests/casia_1p/p18/001-nm-01-018-041.jpg")
-# img = img.resize((224,224))
-# timg = tf.ToTensor()(img)
-
-# timg = torch.unsqueeze(timg, 0)
-
 ls = 0
 #load image from pytorch structure
 #---------------------------------
+
+#put the paths of the various datasets for evaluation here:
+#clean_ds is the clean dataset, before applying the patch
+#patch_ds is the attacked dataset, after applying the patch
+#inpaint_ds is the recovered dataset, after running Jedi
 clean_ds = ds.ImageFolder(root = "",
                    )
 patch_ds = ds.ImageFolder(root = "",
