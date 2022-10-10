@@ -27,4 +27,8 @@ For the detection evaluation, the darknet repository is required [(here)](https:
 
 Yolov2/3/4 weights are available here
 
-(link tbd) 
+[YoloV2](https://drive.google.com/file/d/1iEm6tv521flagCJzwUy2KURTFH1O7zcA/view?usp=sharing)
+
+[YoloV3](https://drive.google.com/file/d/120vF6NEcUSpTNXovsRA6oeIk3LR_zxk0/view?usp=sharing)
+
+[YoloV4](https://drive.google.com/file/d/1V_xNETpN4Tq6w-wBnBPGdkYhNhR_xpSy/view?usp=sharing)
