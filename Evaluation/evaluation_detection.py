@@ -17,7 +17,7 @@ def list_duplicates(n):
              result[item]=[i for i,j in enumerate(n) if j==item] 
      return result
 
-#yolo configs
+#yolo configs, get the cfg files and weight files from the links in the repo 
 yolo_v2_cfg = ""
 yolo_v2_weights = ""
 
@@ -27,8 +27,10 @@ yolo_v3_weights = ""
 yolo_v4_cfg = ""
 yolo_v4_weights = ""
 
-
-
+#put the paths of the various datasets for evaluation here:
+#fpath_clean is the clean dataset, before applying the patch
+#fpath_patch is the attacked dataset, after applying the patch
+#fpath_inpaint is the recovered dataset, after running Jedi
 fpath_clean = ""
 fpath_patch = ""
 fpath_inpaint = ""
