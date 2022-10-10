@@ -3,7 +3,7 @@ This is the anonymous repository for NDSS'23 submitted paper #240: "Jedi: Entrop
 
 The autoencoder used for the samples contained in this repository is available here
 
-(link tbd)
+[autoencoder link](https://drive.google.com/file/d/1N3BXaWu85uNJ378_SHkU_HElAIiaCaDr/view?usp=sharing)
 
 ## Evaluation
 The evaluuation files require Python 3.7 and Pytorch
