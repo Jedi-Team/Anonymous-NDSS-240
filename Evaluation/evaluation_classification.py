@@ -21,7 +21,7 @@ lost = 0
 #VGG16 / VGG19 / ResNet18 / Resnet50 / Resnet101 / InceptionV3
 #---------------
 #pascal07 models: download from the main page and insert weight file path here
-model = torch.load("")
+model = torch.load("./classifiers/resnet50_pas07.pth")
 
 
 #pretrained imagenet: we use pre-trained pytorch models
