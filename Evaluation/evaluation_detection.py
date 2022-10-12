@@ -18,14 +18,14 @@ def list_duplicates(n):
      return result
 
 #yolo configs, get the cfg files and weight files from the links in the repo 
-yolo_v2_cfg = ""
-yolo_v2_weights = ""
+yolo_v2_cfg = "./cfg/yolo.cfg"
+yolo_v2_weights = "./weights/yolo.weights"
 
-yolo_v3_cfg = ""
-yolo_v3_weights = ""
+yolo_v3_cfg = "./cfg/yolov3-spp.cfg"
+yolo_v3_weights = "./weights/yolov3-spp.weights"
 
-yolo_v4_cfg = ""
-yolo_v4_weights = ""
+yolo_v4_cfg = "./cfg/yolov4.cfg"
+yolo_v4_weights = "./weights/yolov4.weights"
 
 #put the paths of the various datasets for evaluation here:
 #fpath_clean is the clean dataset, before applying the patch
