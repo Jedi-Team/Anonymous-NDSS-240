@@ -1,5 +1,5 @@
 # Jedi Adversarial Patch Defense
-This is the anonymous repository for NDSS'23 submitted paper #240: "Jedi: Entropy-based Localization and Removal of Adversarial Patches"
+This is the anonymous repository for: "Jedi: Entropy-based Localization and Removal of Adversarial Patches"
 
 The autoencoder used for the samples contained in this repository is available here
 
