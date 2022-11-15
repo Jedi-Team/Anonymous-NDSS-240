@@ -32,3 +32,9 @@ Yolov2/3/4 weights are available here
 [YoloV3](https://drive.google.com/file/d/120vF6NEcUSpTNXovsRA6oeIk3LR_zxk0/view?usp=sharing)
 
 [YoloV4](https://drive.google.com/file/d/1V_xNETpN4Tq6w-wBnBPGdkYhNhR_xpSy/view?usp=sharing)
+
+##Adaptive attack
+
+Our adaptive attack is based on [this](https://github.com/A-LinCui/Adversarial_Patch_Attack/) implementation of [Adversarial Patch](https://arxiv.org/abs/1712.09665) by Brown et al. 
+
+Add le_attack.py to the root of the linked repository and run it after checking the setting and variables in order to generate a low entropy patch.
