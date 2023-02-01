@@ -1,9 +1,20 @@
 # Jedi Adversarial Patch Defense
 This is the anonymous repository for: "Jedi: Entropy-based Localization and Removal of Adversarial Patches"
 
-The autoencoder used for the samples contained in this repository is available here
+## Running Jedi
 
-[autoencoder link](https://drive.google.com/file/d/1N3BXaWu85uNJ378_SHkU_HElAIiaCaDr/view?usp=sharing)
+Jedi.m is the main file used for detecting and removing adversarial patches. To run this file, follow the next steps
+
+Step 1 : Set whether you wish to use the autoencoder or evaluate the accuracy of the generated masks in lines 5 and 7 respectively
+
+Step 2 : Indicate the folders where the adversarial images are (line 12) and where the cleaned images will be saved (line 14)
+
+Step 3 : If you wish to evaluate the mask accuracy, change the path in line 18 to the mat file containing the ground truths. Otherwise ignore this step.
+
+Step 4: If you wish to use the autoencoder, change the path in line 24 to file containing the autoencoder, Otherwise ignore this step
+
+The file is setup by default to run on the provided sample images , and the autoencoder for these files can be downloaded [here](https://drive.google.com/file/d/1N3BXaWu85uNJ378_SHkU_HElAIiaCaDr/view?usp=sharing) .
+The patch mask ground truth files for the sample images are provided in the sample_gt.mat files.
 
 ## Evaluation
 The evaluuation files require Python 3.7 and Pytorch
